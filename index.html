@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeBerry - Patterns - Publish/Subscribe implementáció</title>
+  <!-- font for logo: -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <!-- Bulma css framework for styling: -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <!-- icons: -->
+  <script src="https://kit.fontawesome.com/61877af9d0.js" crossorigin="anonymous"></script>
+  <!-- our own styles: -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <span class="icon is-large"> <i class="fab fa-accusoft fa-2x"></i> </span> 
+      <span class="cb-logo">FerkoShop</span>
+    </a>
+  </div>
+</nav>
+  <div class="section columns">
+    <div class="column">
+      <div class="js-product-list tile is-ancestor">
+        <div class="js-product tile is-4 is-parent">
+          <div class="card tile is-child">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <!--
+                  - osztályneveket adott hozzá azokhoz az elemekhez, amelyek tartalmát később módosítani szeretnénk
+                  - az osztályneveket "js-" karakterrel kezdte, hogy tudjuk, hogy a JavaScript használja és
+                  nem változtatja meg véletlenül stílusváltással 
+                 -->
+                 <img class="js-product-image" src="img/AA.JPG" alt="Placeholder image">
+                </figure>
+            </div>
+          <div class="card-content">
+           <div class="content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img class="js-product-thumb" src="img/AA.JPG" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">                  
+                <p class="js-product-category subtitle is-6">category</p>
+              </div>
+            </div>
+
+              <div class="content">
+                  <p class="js-product-name title is-4">Product Name</p>
+                  <p class="js-product-description">
+                      Ez itt egy termék leírás. Nem túl hosszú, nem túl rövd, csupán néhány mondat.
+                  </p>                                
+              </div>
+            </div>
+              <footer class="level">
+                <div class="level-left">
+                  <div class="js-product-price level-item title is-4">
+                    €0
+                  </div>
+                </div>
+                <div class="level-right">
+                  <button class="js-product-button level-item button is-primary">
+                    Kosárba teszem
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-2">
+      <div class="box">
+        <h2 class="title is-6">
+          <span class="icon"><i class="fas fa-shopping-cart fa-2x"></i></span>
+          Kosár tartalma
+        </h2>
+        <table class="js-cart table is-size-7 is-fullwidth">
+          <tr>
+            <td>Az Ön kosara üres</td>
+          </tr>
+        </table>
+        <button class="button is-fullwidth is-success is-outlined">Fizetés</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- here goes our JavaScript: -->
+  <script src="pubsub.js"></script>
+  <script src="product.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

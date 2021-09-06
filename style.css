@@ -1,0 +1,37 @@
+/* 
+  styles by the Bulma CSS framework   https://bulma.io/documentation/
+*/
+
+body{
+    background-color: beige;
+    color: lime;
+    text-shadow: 2px;
+}
+
+.media-left, .media, .media-content{
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.js-product-name, .js-product-description{
+    text-align: center;
+}
+
+.cb-logo{
+    font-family: 'Fredoka One', cursive;
+    font-size: 2em;
+    color: lime;
+    margin-left: 10px;
+}
+
+.is-large{   
+    color: lime;
+}
+
+.icon{
+    margin-right: 8px;
+}
+
+/*  <i class="fab fa-accusoft fa-2x"></i>  */
+
